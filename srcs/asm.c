@@ -23,26 +23,28 @@ int		main(int argc, char **argv)
 	ssl = init_ssl();
 	if (argc > 1)
 	{
-		while (argv[argc - 1][j])
-			j++;
-		while (j != -1 && argv[argc - 1][j] != '.')
-			j--;
-		if (argv[argc - 1][j] == '.' && argv[argc - 1][j + 1] == 's')
-		{
-			if (!(ssl->f_name = (char*)malloc(sizeof(char *) * (j + 4))))
-				exit(0);
-			ssl->f_name[j++] = '.';
-			ssl->f_name[j++] = 'c';
-			ssl->f_name[j++] = 'o';
-			ssl->f_name[j++] = 'r';
-			ssl->f_name[j] = '\0';
-			j = j - 5;
-			while (j != -1)
-			{
-				ssl->f_name[j] = argv[argc - 1][j];
-				j--;
-			}
-		}
+				rename_f(argc, argv, &ssl);
+//	{
+//		while (argv[argc - 1][j])
+//			j++;
+//		while (j != -1 && argv[argc - 1][j] != '.')
+//			j--;
+//		if (argv[argc - 1][j] == '.' && argv[argc - 1][j + 1] == 's')
+//		{
+//			if (!(ssl->f_name = (char*)malloc(sizeof(char *) * (j + 4))))
+//				exit(0);
+//			ssl->f_name[j++] = '.';
+//			ssl->f_name[j++] = 'c';
+//			ssl->f_name[j++] = 'o';
+//			ssl->f_name[j++] = 'r';
+//			ssl->f_name[j] = '\0';
+//			j = j - 5;
+//			while (j != -1)
+//			{
+//				ssl->f_name[j] = argv[argc - 1][j];
+//				j--;
+//			}
+//		}
 		ssl->fd = open(argv[argc - 1], O_RDONLY);
 		if ((fd = open(argv[argc - 1], O_RDONLY)) == -1)
 			write_error("DOESNT READ FILE_CHECK NAME\n");
