@@ -6,13 +6,13 @@
 /*   By: almazg <almazg@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/17 11:26:01 by almazg            #+#    #+#             */
-/*   Updated: 2020/04/17 15:36:11 by almazg           ###   ########.fr       */
+/*   Updated: 2020/04/17 15:40:41 by almazg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/asm.h"
 
-void ft_rename_f(int argc, char **argv, t_file **sl)
+void rename_f(int argc, char **argv, t_file **sl)
 {
 	t_file	*ssl;
 	int j;
