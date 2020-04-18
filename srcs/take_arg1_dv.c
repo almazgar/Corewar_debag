@@ -25,5 +25,4 @@ void	take_arg1_dv(char *line, t_file *ssl, t_exec *com, int i)
 		write_error("WRONG_LABEL_NAME");
 	com->ta1 = 5;
 	ssl->a = ssl->a + i;
-//	return (i);
 }

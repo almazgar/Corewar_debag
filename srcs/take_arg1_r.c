@@ -25,5 +25,4 @@ void	take_arg1_r(char *line, t_file *ssl, t_exec *com, int i)
 		write_error("WRONG_NUMBER_REGISTR");
 	com->ta1 = 1;
 	ssl->a = ssl->a + i + 1;
-//	return (i);
 }

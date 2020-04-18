@@ -16,20 +16,6 @@ void	take_arg1_pr(char *line, t_file *ssl, t_exec *com, int i)
 {
 	if (line[ssl->a + i] == '-')
 		take_arg1_pr_neg(line, ssl, com, i);
-//	{
-//		i++;
-//		while (ft_isdigit(line[ssl->a + i]))
-//			i++;
-//		if ((i > 2) && is_limit(line[ssl->a + i]))
-//		{
-//			if (!(com->a1 = ft_strsub(line, ssl->a + 1, i - 1)))
-//				write_error("ERROR_ARGUMENT_INIT");
-//		}
-//		else
-//			write_error("WRONG_NUMBER_ARGUMENT");
-//		com->ta1 = 2;
-//		ssl->a = ssl->a + i;
-//	}
 	else if (ft_isdigit(line[ssl->a + i]) && ++i)
 	{
 		while (ft_isdigit(line[ssl->a + i]))
@@ -46,5 +32,4 @@ void	take_arg1_pr(char *line, t_file *ssl, t_exec *com, int i)
 	}
 	else
 		write_error("WRONG_NUMBER_ARGUMENT");
-//	return (i);
 }

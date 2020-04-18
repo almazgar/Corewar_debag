@@ -25,5 +25,4 @@ void	take_arg1_d(char *line, t_file *ssl, t_exec *com, int i)
 		write_error("WRONG_LABEL_ARGUMENT");
 	com->ta1 = 3;
 	ssl->a = ssl->a + i;
-//	return (i);
 }
