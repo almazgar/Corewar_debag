@@ -6,7 +6,7 @@
 /*   By: lgarse <lgarse@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/08 16:13:47 by almazg            #+#    #+#             */
-/*   Updated: 2020/04/18 12:09:23 by almazg           ###   ########.fr       */
+/*   Updated: 2020/04/17 16:47:17 by almazg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,6 @@ void				line_to_write(t_exec **com, t_file *ssl)
 		if (current->ta3 != 0)
 			i = line_part(current, s, i, 3);
 		line_to_write2(current->n_bytes, ssl, i, s);
-//		if (i == current->n_bytes)
-//			write(ssl->text, s, i);
-//		else
-//			write_error("ERROR_CONVERTING_ARGUMENTS");
 		current = current->next;
 		ft_memdel((void**)&s);
 	}
