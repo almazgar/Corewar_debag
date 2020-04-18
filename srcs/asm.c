@@ -32,6 +32,6 @@ int		main(int argc, char **argv)
 		ft_strdel(&line);
 	}
 	else
-		ft_putstr("Usage: ./asm <sourcefile.s>\n");
+		write_error("Usage: ./asm <sourcefile.s>\n");
 	return (0);
 }

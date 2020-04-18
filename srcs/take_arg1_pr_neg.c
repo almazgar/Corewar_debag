@@ -26,5 +26,4 @@ void	take_arg1_pr_neg(char *line, t_file *ssl, t_exec *com, int i)
 		write_error("WRONG_NUMBER_ARGUMENT");
 	com->ta1 = 2;
 	ssl->a = ssl->a + i;
-//	return (i);
 }

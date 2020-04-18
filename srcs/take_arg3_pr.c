@@ -16,7 +16,6 @@ void	take_arg3_pr(char *line, t_file *ssl, t_exec *com, int i)
 {
 	if (line[ssl->a + i] == '-')
 		take_arg3_pr_neg(line, ssl, com, i);
-//		take_arg3_neg(line, ssl, com, i);
 	else if (ft_isdigit(line[ssl->a + i]) && ++i)
 	{
 		while (ft_isdigit(line[ssl->a + i]))
