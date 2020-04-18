@@ -6,7 +6,7 @@
 #    By: avenonat <avenonat@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/03 13:49:33 by avenonat          #+#    #+#              #
-#    Updated: 2020/04/17 11:48:21 by almazg           ###   ########.fr        #
+#    Updated: 2020/04/17 20:15:02 by almazg           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,8 @@ SRC =			asm.c init_ssl.c including_magic.c write_error.c \
                 arg_add.c kod_type_arg.c add_kta.c free_label.c free_exec.c\
                 free_tfile.c line_to_write.c including_size.c \
                 name_comment.c rename_f.c choose_n_c.c c_data.c\
+                line_part.c order_arg.c\
+
 
 OBJ =			$(SRC:%.c=%.o)
 

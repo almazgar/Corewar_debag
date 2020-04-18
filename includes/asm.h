@@ -6,7 +6,7 @@
 /*   By: avenonat <avenonat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 15:22:03 by avenonat          #+#    #+#             */
-/*   Updated: 2020/04/17 15:40:41 by almazg           ###   ########.fr       */
+/*   Updated: 2020/04/17 21:36:01 by almazg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,4 +109,6 @@ void					name_comment(char *line, t_file *ssl);
 void 					rename_f(int argc, char **argv, t_file **sl);
 void					choose_n_c(char *line, t_file *ssl, char *n, char *c);
 void					c_data(t_file *ssl, t_exec *com, t_label *list);
+int						line_part(t_exec *com, unsigned char *s, int i, int n);
+int						order_arg(t_exec *com, char **a, int ta, int n);
 #endif
