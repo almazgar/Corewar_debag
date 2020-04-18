@@ -6,7 +6,7 @@
 /*   By: avenonat <avenonat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 15:22:03 by avenonat          #+#    #+#             */
-/*   Updated: 2020/04/18 14:40:30 by almazg           ###   ########.fr       */
+/*   Updated: 2020/04/18 15:45:20 by almazg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,4 +118,11 @@ void					check_comment2(char *line, t_file *ssl);
 int						check_comment3(char *line, t_file *ssl, int j, char *s);
 void					check_name2(char *line, t_file *ssl);
 int						check_name3(char *line, t_file *ssl, int j, char *s);
+void					take_arg1_r(char *line, t_file *ssl, t_exec *com, int i);
+void					take_arg1_pr(char *line, t_file *ssl, t_exec *com, int i);
+void					take_arg1_d(char *line, t_file *ssl, t_exec *com, int i);
+void					take_arg1_n(char *line, t_file *ssl, t_exec *com, int i);
+void					take_arg1_neg(char *line, t_file *ssl, t_exec *com, int i);
+void					take_arg1_dv(char *line, t_file *ssl, t_exec *com, int i);
+void					take_arg1_pr_neg(char *line, t_file *ssl, t_exec *com, int i);
 #endif
