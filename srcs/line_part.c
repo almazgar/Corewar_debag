@@ -12,12 +12,12 @@
 
 #include "../includes/asm.h"
 
-int	line_part(t_exec *com, unsigned char *s, int i, int n)
+int				line_part(t_exec *com, unsigned char *s, int i, int n)
 {
-	long long j;
-	int k;
-	char *a;
-	int ta;
+	long long	j;
+	int			k;
+	char		*a;
+	int			ta;
 
 	a = NULL;
 	ta = com->ta1;

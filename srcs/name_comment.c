@@ -22,29 +22,7 @@ void	name_comment(char *line, t_file *ssl)
 	while (!(ssl->n && ssl->c) && (get_next_line(ssl->fd, &line)) > 0)
 	{
 		ssl->a = 0;
-		choose_n_c(line, ssl, n,c);
-//		while (line[ssl->a])
-//		{
-//			skip_probel(ssl, line);
-//			no_comment(ssl, line);
-//			ft_strncpy(n, &line[ssl->a], 5);
-//			ft_strncpy(c, &line[ssl->a], 8);
-//			if (line[ssl->a])
-//			{
-//				if (ft_strcmp(n, ".name") == 0 && !ssl->n)
-//				{
-//					check_name(line, ssl);
-//					break ;
-//				}
-//				else if (ft_strcmp(c, ".comment") == 0 && !ssl->c)
-//				{
-//					check_comment(line, ssl);
-//					break ;
-//				}
-//				else
-//					write_error("COMMENT AND NAME ERROR");
-//			}
-//		}
+		choose_n_c(line, ssl, n, c);
 		ft_strdel(&line);
 	}
 	ft_memdel((void**)&n);

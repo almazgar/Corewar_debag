@@ -17,8 +17,8 @@ void			c_data(t_file *ssl, t_exec *com, t_label *list)
 	label_change(list, &com);
 	free_label(list);
 	arg_add(&com);
-	if ((ssl->text = open(ssl->f_name, O_CREAT | O_TRUNC | O_WRONLY,
-						  0644)) == -1)
+	if ((ssl->text = open(ssl->f_name,
+			O_CREAT | O_TRUNC | O_WRONLY, 0644)) == -1)
 		write_error("FILE DOESN'T CREAT");
 	including_magic(ssl->text);
 	including_size(ssl);

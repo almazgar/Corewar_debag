@@ -12,10 +12,10 @@
 
 #include "../includes/asm.h"
 
-void rename_f(int argc, char **argv, t_file **sl)
+void		rename_f(int argc, char **argv, t_file **sl)
 {
 	t_file	*ssl;
-	int j;
+	int		j;
 
 	ssl = *sl;
 	j = 0;
