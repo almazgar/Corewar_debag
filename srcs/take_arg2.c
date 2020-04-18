@@ -6,7 +6,7 @@
 /*   By: lgarse <lgarse@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/01 10:03:44 by almazg            #+#    #+#             */
-/*   Updated: 2020/04/18 16:53:21 by almazg           ###   ########.fr       */
+/*   Updated: 2020/04/18 17:00:34 by almazg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ void	take_arg2(char *line, t_file *ssl, t_exec *com)
 //		com->ta2 = 3;
 //		ssl->a = ssl->a + i;
 //	}
-	else if (ft_isdigit(line[ssl->a]) && ++i)
+	else if (ft_isdigit(line[ssl->a]))
 		take_arg2_n(line, ssl, com, 1);
 //	{
 //		while (ft_isdigit(line[ssl->a + i]))

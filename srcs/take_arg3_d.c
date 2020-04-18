@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   take_arg2pr_neg.c                                  :+:      :+:    :+:   */
+/*   take_arg3_d.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: almazg <almazg@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/18 16:23:22 by almazg            #+#    #+#             */
-/*   Updated: 2020/04/18 16:23:22 by almazg           ###   ########.fr       */
+/*   Created: 2020/04/18 17:32:53 by almazg            #+#    #+#             */
+/*   Updated: 2020/04/18 17:32:53 by almazg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/asm.h"
 
-void	take_arg2_pr_neg(char *line, t_file *ssl, t_exec *com, int i)
+void	take_arg3_d(char *line, t_file *ssl, t_exec *com, int i)
 {
-	while (ft_isdigit(line[ssl->a + i]))
+	while (line[ssl->a + i] && ft_strchr(LABEL_CHARS, line[ssl->a + i]))
 		i++;
-	if ((i > 1) && is_limit(line[ssl->a + i]))
+	if ((i > 2) && is_limit(line[ssl->a + i]))
 	{
-		if (!(com->a2 = ft_strsub(line, ssl->a, i)))
+		if (!(com->a3 = ft_strsub(line, ssl->a + 2, i - 2)))
 			write_error("ERROR_ARGUMENT_INIT");
 	}
 	else
-		write_error("WRONG_NUMBER_ARGUMENT");
-	com->ta2 = 4;
+		write_error("WRONG_LABEL_ARGUMENT");
+	com->ta3 = 3;
 	ssl->a = ssl->a + i;
 }
