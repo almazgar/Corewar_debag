@@ -104,6 +104,7 @@ void					free_label(t_label *list);
 void					free_exec(t_exec *com);
 void					free_t_file(t_file *ssl);
 void					line_to_write(t_exec **com, t_file *ssl);
+void					line_to_write2(int k, t_file *ssl, int i, unsigned char *s);
 void					including_size(t_file *ssl);
 void					name_comment(char *line, t_file *ssl);
 void 					rename_f(int argc, char **argv, t_file **sl);
