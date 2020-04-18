@@ -6,7 +6,7 @@
 /*   By: lgarse <lgarse@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/27 09:52:44 by almazg            #+#    #+#             */
-/*   Updated: 2020/04/18 14:35:28 by almazg           ###   ########.fr       */
+/*   Updated: 2020/04/18 14:56:08 by almazg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void		take_label(char *line, t_file *ssl, t_label **list, t_exec *co)
 {
 	int		i;
-	char	*name;
+//	char	*name;
 	t_exec	*com;
 
 	com = NULL;
@@ -24,10 +24,11 @@ void		take_label(char *line, t_file *ssl, t_label **list, t_exec *co)
 		i++;
 	if ((i) && line[ssl->a + i] == ':')
 	{
-		if (!(name = ft_strsub(line, ssl->a, i)))
-			write_error("ERROR_STR_LABEL");
-		add_label(list, cnl(name, ssl->line_byte));
-		ssl->a = ssl->a + i + 1;
+		take_label2(line, ssl, i, list);
+//		if (!(name = ft_strsub(line, ssl->a, i)))
+//			write_error("ERROR_STR_LABEL");
+//		add_label(list, cnl(name, ssl->line_byte));
+//		ssl->a = ssl->a + i + 1;
 	}
 	else if (i)
 	{
