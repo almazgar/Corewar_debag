@@ -6,7 +6,7 @@
 /*   By: avenonat <avenonat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/07 15:22:03 by avenonat          #+#    #+#             */
-/*   Updated: 2020/04/18 15:45:20 by almazg           ###   ########.fr       */
+/*   Updated: 2020/04/18 17:50:58 by almazg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,4 +125,18 @@ void					take_arg1_n(char *line, t_file *ssl, t_exec *com, int i);
 void					take_arg1_neg(char *line, t_file *ssl, t_exec *com, int i);
 void					take_arg1_dv(char *line, t_file *ssl, t_exec *com, int i);
 void					take_arg1_pr_neg(char *line, t_file *ssl, t_exec *com, int i);
+void					take_arg2_r(char *line, t_file *ssl, t_exec *com, int i);
+void					take_arg2_pr(char *line, t_file *ssl, t_exec *com, int i);
+void					take_arg2_neg(char *line, t_file *ssl, t_exec *com, int i);
+void					take_arg2_d(char *line, t_file *ssl, t_exec *com, int i);
+void					take_arg2_n(char *line, t_file *ssl, t_exec *com, int i);
+void					take_arg2_dv(char *line, t_file *ssl, t_exec *com, int i);
+void					take_arg2_pr_neg(char *line, t_file *ssl, t_exec *com, int i);
+void					take_arg3_r(char *line, t_file *ssl, t_exec *com, int i);
+void					take_arg3_pr(char *line, t_file *ssl, t_exec *com, int i);
+void					take_arg3_pr_neg(char *line, t_file *ssl, t_exec *com, int i);
+void					take_arg3_neg(char *line, t_file *ssl, t_exec *com, int i);
+void					take_arg3_d(char *line, t_file *ssl, t_exec *com, int i);
+void					take_arg3_n(char *line, t_file *ssl, t_exec *com, int i);
+void					take_arg3_dv(char *line, t_file *ssl, t_exec *com, int i);
 #endif
