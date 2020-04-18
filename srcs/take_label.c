@@ -6,7 +6,7 @@
 /*   By: lgarse <lgarse@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/27 09:52:44 by almazg            #+#    #+#             */
-/*   Updated: 2020/04/16 10:34:33 by almazg           ###   ########.fr       */
+/*   Updated: 2020/04/18 14:35:28 by almazg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,13 @@ void		take_label(char *line, t_file *ssl, t_label **list, t_exec *co)
 	{
 		ssl->a = ssl->a + i;
 		if (1 < i && i < 6)
-		{
-			com = init_exec();
-			com->line_byte = ssl->line_byte;
-			compare(ssl, line, i, com);
-			ssl->line_byte = ssl->line_byte + com->n_bytes;
-		}
+			com = take_opera(ssl, line, i, com);
+//		{
+//			com = init_exec();
+//			com->line_byte = ssl->line_byte;
+//			compare(ssl, line, i, com);
+//			ssl->line_byte = ssl->line_byte + com->n_bytes;
+//		}
 		else
 			write_error("WRONG_OPERATOR");
 		add_comand(co, com);
