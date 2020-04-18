@@ -6,7 +6,7 @@
 #    By: avenonat <avenonat@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/03 13:49:33 by avenonat          #+#    #+#              #
-#    Updated: 2020/04/18 15:40:32 by almazg           ###   ########.fr        #
+#    Updated: 2020/04/18 17:50:58 by almazg           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,11 @@ SRC =			asm.c init_ssl.c including_magic.c write_error.c \
                 line_part.c order_arg.c line_to_write2.c take_opera.c take_label2.c\
                 check_comment2.c check_comment3.c check_name2.c check_name3.c\
                 take_arg1_r.c take_arg1_pr.c take_arg1_d.c take_arg1_n.c\
-                take_arg1_neg.c take_arg1_dv.c take_arg_pr_neg.c\
+                take_arg1_neg.c take_arg1_dv.c take_arg1_pr_neg.c\
+                take_arg2_pr.c take_arg2_r.c take_arg2_d.c\
+                take_arg2_dv.c take_arg2_neg.c take_arg2_n.c take_arg2pr_neg.c\
+                take_arg3_r.c take_arg3_pr.c take_arg3_neg.c take_arg3_d.c\
+                take_arg3_n.c take_arg3_pr_neg.c take_arg3_dv.c\
 
 
 OBJ =			$(SRC:%.c=%.o)
@@ -49,7 +53,7 @@ SRC_PATH =   	$(SRC:%=$(SRC_DIR)%)
 OBJ_PATH =		$(addprefix $(OBJ_DIR), $(OBJ))
 
 all:			$(NAME)
-				@echo "\\n\033[32;1m CORE-WAR COMPLETE \033[0m \\n"
+				@echo "\\n\033[32;1m ASM COMPLETE \033[0m \\n"
 
 $(OBJ_DIR):
 				@mkdir -p $(OBJ_DIR)
