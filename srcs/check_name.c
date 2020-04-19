@@ -6,7 +6,7 @@
 /*   By: lgarse <lgarse@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/03 12:44:35 by almazg            #+#    #+#             */
-/*   Updated: 2020/04/18 13:28:58 by almazg           ###   ########.fr       */
+/*   Updated: 2020/04/19 17:43:24 by almazg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,6 @@ void		check_name(char *line, t_file *ssl)
 		s[j++] = line[(ssl->a)++];
 	if (line[ssl->a] != '"')
 		j = check_name3(line, ssl, j, s);
-	if (line[ssl->a] != '"')
-		write_error("ERROR NO FINISH NAME");
 	if (j > PROG_NAME_LENGTH)
 		write_error("VERY LONG NAME");
 	ft_bzero(ssl->name, PROG_NAME_LENGTH);

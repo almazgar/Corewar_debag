@@ -6,7 +6,7 @@
 /*   By: almazg <almazg@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/18 13:05:41 by almazg            #+#    #+#             */
-/*   Updated: 2020/04/18 13:05:41 by almazg           ###   ########.fr       */
+/*   Updated: 2020/04/19 17:38:29 by almazg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,7 @@ int		check_comment3(char *line, t_file *ssl, int j, char *s)
 		s[j++] = '\n';
 		ft_strdel(&line);
 	}
+	if (line[ssl->a] != '"')
+		write_error("ERROR NO FINISH COMMENT");
 	return (j);
 }

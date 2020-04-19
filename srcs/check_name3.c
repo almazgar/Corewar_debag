@@ -25,5 +25,7 @@ int		check_name3(char *line, t_file *ssl, int j, char *s)
 		s[j++] = '\n';
 		ft_strdel(&line);
 	}
+	if (line[ssl->a] != '"')
+		write_error("ERROR NO FINISH NAME");
 	return (j);
 }
