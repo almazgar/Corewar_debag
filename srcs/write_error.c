@@ -16,5 +16,6 @@ void	write_error(char *str)
 {
 	write(1, "\n", 1);
 	ft_putstr(str);
+	write(1, "\n", 1);
 	exit(0);
 }
