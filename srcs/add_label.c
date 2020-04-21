@@ -23,12 +23,8 @@ void	add_label(t_label **list, t_label *new)
 			current = *list;
 			while (current->next)
 			{
-//				if (ft_strequ(current->name, new->name))
-//					write_error("Double lable");
 				current = current->next;
 			}
-//			if (ft_strequ(current->name, new->name))
-//				write_error("Double lable");
 			current->next = new;
 		}
 		else
