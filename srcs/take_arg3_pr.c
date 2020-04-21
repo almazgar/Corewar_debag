@@ -6,7 +6,7 @@
 /*   By: almazg <almazg@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/18 17:02:57 by almazg            #+#    #+#             */
-/*   Updated: 2020/04/18 17:50:58 by almazg           ###   ########.fr       */
+/*   Updated: 2020/04/21 10:54:24 by almazg           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	take_arg3_pr(char *line, t_file *ssl, t_exec *com, int i)
 {
 	if (line[ssl->a + i] == '-')
-		take_arg3_pr_neg(line, ssl, com, i);
+		take_arg3_pr_neg(line, ssl, com, 2);
 	else if (ft_isdigit(line[ssl->a + i]) && ++i)
 	{
 		while (ft_isdigit(line[ssl->a + i]))

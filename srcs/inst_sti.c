@@ -20,9 +20,9 @@ void	sti(t_file *ssl, char *line, t_exec *com)
 	no_separator(ssl, line);
 	take_arg3(line, ssl, com);
 	if (com->ta1 != 1)
-		write_error("ERROR_TYPE_ARGUMENT_STI_COMMAND");
+		write_error("ERROR_TYPE_ARGUMENT_1_STI_COMMAND");
 	if (com->ta3 == 4 || com->ta3 == 5)
-		write_error("ERROR_TYPE_ARGUMENT_STI_COMMAND");
+		write_error("ERROR_TYPE_ARGUMENT_3_STI_COMMAND");
 	com->inst = 11;
 	com->n_bytes = 7;
 	com->dir_size = 2;
