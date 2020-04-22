@@ -19,6 +19,7 @@ void		skolkovo(char *line, t_file *ssl)
 	name_comment(line, ssl);
 	head = connecting_people(line, ssl);
 	close(ssl->text);
+	write(1, "\n", 1);
 	ft_putstr("Writing bytecode to ");
 	ft_putendl(ssl->f_name);
 	free_exec(head);
