@@ -25,11 +25,11 @@ void		check_comment(char *line, t_file *ssl)
 	if (line[ssl->a] != '"')
 		check_comment2(line, ssl);
 	(ssl->a)++;
-	while (line[ssl->a] && line[ssl->a] != '"')
+	while (line[ssl->a] && line[ssl->a] != '"' && j < COMMENT_LENGTH)
 		s[j++] = line[(ssl->a)++];
 	if (line[ssl->a] != '"')
 		j = check_comment3(line, ssl, j, s);
-	if (j > COMMENT_LENGTH)
+	if (j >= COMMENT_LENGTH)
 		write_error("VERY LONG COMMENT");
 	ft_bzero(ssl->comment, COMMENT_LENGTH);
 	ft_strncpy(ssl->comment, s, j);

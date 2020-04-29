@@ -25,11 +25,11 @@ void		check_name(char *line, t_file *ssl)
 	if (line[ssl->a] != '"')
 		check_name2(line, ssl);
 	(ssl->a)++;
-	while (line[ssl->a] && line[ssl->a] != '"')
+	while (line[ssl->a] && line[ssl->a] != '"' && j < PROG_NAME_LENGTH)
 		s[j++] = line[(ssl->a)++];
 	if (line[ssl->a] != '"')
 		j = check_name3(line, ssl, j, s);
-	if (j > PROG_NAME_LENGTH)
+	if (j >= PROG_NAME_LENGTH)
 		write_error("VERY LONG NAME");
 	ft_bzero(ssl->name, PROG_NAME_LENGTH);
 	ft_strncpy(ssl->name, s, j);

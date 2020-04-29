@@ -18,8 +18,10 @@ int		check_name3(char *line, t_file *ssl, int j, char *s)
 	while ((get_next_line(ssl->fd, &line)) > 0)
 	{
 		ssl->a = 0;
-		while (line[ssl->a] && line[ssl->a] != '"')
+		while ((j < PROG_NAME_LENGTH) && line[ssl->a] && line[ssl->a] != '"')
 			s[j++] = line[(ssl->a)++];
+		if (j >= PROG_NAME_LENGTH)
+			write_error("VERY LONG NAME");
 		if (line[ssl->a] == '"')
 			break ;
 		s[j++] = '\n';
